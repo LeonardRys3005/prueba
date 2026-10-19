@@ -1,0 +1,115 @@
+/* Importar una fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+/* Variables de color para mantener el diseño consistente */
+:root {
+    --bg-color: #0f172a; /* Azul muy oscuro */
+    --card-bg: #1e293b;  /* Azul oscuro para tarjetas */
+    --text-main: #f8fafc; /* Blanco suave */
+    --text-muted: #94a3b8; /* Gris azulado */
+    --accent-green: #10b981; /* Verde de ganancia/dinero */
+    --accent-blue: #3b82f6; /* Azul tecnológico */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Cabecera principal */
+header {
+    text-align: center;
+    padding: 80px 20px 40px;
+    max-width: 800px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* Secciones de contenido (Tarjetas) */
+section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: var(--accent-blue);
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.2);
+    padding-bottom: 10px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+/* Lista de características */
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+/* Icono de check verde simulado con CSS */
+ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+ul li strong {
+    color: var(--text-main);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
